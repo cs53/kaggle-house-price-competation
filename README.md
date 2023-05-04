@@ -207,8 +207,7 @@ train_df.head()
 
 
 ```python
-# 合并数据，将SalePrice拿出来 作为训练目标 只出现在训练集中 不出现在测试集中
-# SalePrice这个分布不是类正态的分布，需要纠正一下（正则化）
+
 %matplotlib inline
 price = pd.DataFrame({'price': train_df['SalePrice'], 'log(price + 1)': np.log1p(train_df['SalePrice'])})
 price.hist()
